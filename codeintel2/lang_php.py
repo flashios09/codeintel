@@ -1547,7 +1547,7 @@ class PHPFunction:
                 self.returnType = docinfo[2][0]
         # if self.returnType:
             # self.signature = '%s %s' % (self.returnType.lower(), self.signature, )
-        self.signature = "%s\%s::<var class='function_name'>%s</var>" % (self.currentNamespace.name, self.classname, self.signature)
+        self.signature = "%s\<var class='classname'>%s</var>::<var class='function_name'>%s</var>" % (self.currentNamespace.name, self.classname, self.signature)
         self.signature += "("
         if self.args:
             self.signature +=  ", ".join([x.signature for x in self.args])
